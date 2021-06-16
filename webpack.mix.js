@@ -21,6 +21,7 @@ mix
     .sass('resources/sass/oneui/themes/smooth.scss', 'public/css/themes/')
 
     /* JS */
+    .js('resources/js/app.js', 'public/js')
     .js('resources/js/app.js', 'public/js/laravel.app.js')
     .js('resources/js/oneui/app.js', 'public/js/oneui.app.js')
 

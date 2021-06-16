@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -112,12 +112,12 @@ var pageTablesDatatables = /*#__PURE__*/function () {
 
   _createClass(pageTablesDatatables, null, [{
     key: "initDataTables",
-
+    value:
     /*
      * Init DataTables functionality
      *
      */
-    value: function initDataTables() {
+    function initDataTables() {
       // Override a few default classes
       jQuery.extend(jQuery.fn.dataTable.ext.classes, {
         sWrapper: "dataTables_wrapper dt-bootstrap4",
@@ -185,14 +185,14 @@ jQuery(function () {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*******************************************************!*\
   !*** multi ./resources/js/pages/tables_datatables.js ***!
   \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\KodeStudio-Login\resources\js\pages\tables_datatables.js */"./resources/js/pages/tables_datatables.js");
+module.exports = __webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/js/pages/tables_datatables.js */"./resources/js/pages/tables_datatables.js");
 
 
 /***/ })
