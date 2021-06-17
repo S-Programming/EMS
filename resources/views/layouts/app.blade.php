@@ -9,7 +9,9 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
+        <link rel="stylesheet" href="{{ asset('assets/css/oneui.css') }}" id="css-main">
+        <script src="{{ asset('assets/js/oneui.core.min.js') }}"></script>
+{{--        <script src="{{ asset('assets/js/oneui.app.js') }}"></script>--}}
     </head>
     <body class="font-sans antialiased">
        <div id="app">

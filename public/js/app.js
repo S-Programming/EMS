@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -36792,14 +36792,86 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 1:
-/*!***********************************!*\
-  !*** multi ./resources/js/app.js ***!
-  \***********************************/
+/***/ "./resources/sass/main.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/main.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/oneui/themes/amethyst.scss":
+/*!***************************************************!*\
+  !*** ./resources/sass/oneui/themes/amethyst.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/oneui/themes/city.scss":
+/*!***********************************************!*\
+  !*** ./resources/sass/oneui/themes/city.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/oneui/themes/flat.scss":
+/*!***********************************************!*\
+  !*** ./resources/sass/oneui/themes/flat.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/oneui/themes/modern.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/oneui/themes/modern.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/oneui/themes/smooth.scss":
+/*!*************************************************!*\
+  !*** ./resources/sass/oneui/themes/smooth.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 0:
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/main.scss ./resources/sass/oneui/themes/amethyst.scss ./resources/sass/oneui/themes/city.scss ./resources/sass/oneui/themes/flat.scss ./resources/sass/oneui/themes/modern.scss ./resources/sass/oneui/themes/smooth.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/sass/oneui/themes/amethyst.scss */"./resources/sass/oneui/themes/amethyst.scss");
+__webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/sass/oneui/themes/city.scss */"./resources/sass/oneui/themes/city.scss");
+__webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/sass/oneui/themes/flat.scss */"./resources/sass/oneui/themes/flat.scss");
+__webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/sass/oneui/themes/modern.scss */"./resources/sass/oneui/themes/modern.scss");
+module.exports = __webpack_require__(/*! /var/www/html/KodeStudio-Login/resources/sass/oneui/themes/smooth.scss */"./resources/sass/oneui/themes/smooth.scss");
 
 
 /***/ })

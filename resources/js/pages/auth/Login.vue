@@ -26,11 +26,11 @@
                                 <!-- Sign In Form -->
                                 <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
                                 <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                <form method="POST" action="">
-                                    @csrf
+                                <form method="POST" @submit.prevent="login">
+
                                     <div class="py-3">
                                         <div class="form-group">
-                                            <input id="email" class="form-control form-control-alt form-control-lg" type="email" name="email" :value="old('email')" required autofocus />
+                                            <input id="email" class="form-control form-control-alt form-control-lg" type="email" name="email"  required autofocus />
                                         </div>
                                         <div class="form-group">
                                             <input id="password" class="form-control form-control-alt form-control-lg" type="password" name="password" required autocomplete="current-password" />
@@ -38,15 +38,15 @@
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="login-remember" name="login-remember" />
-                                                <label class="custom-control-label font-w400" for="login-remember" :value="__('Remember Me')" />
+                                                <label class="custom-control-label font-w400" for="login-remember" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-6 col-xl-5">
-<!--                                            <button class="btn btn-block btn-alt-primary" onclick="validateFieldsByFormId(this)" data-validation="validation-span-id" id="validation-span-id">-->
-<!--                                                <i class="fa fa-fw fa-sign-in-alt mr-1"></i>{{ __('Sign In') }}-->
-<!--                                            </button>-->
+                                            <button class="btn btn-block btn-alt-primary">
+                                                <i class="fa fa-fw fa-sign-in-alt mr-1"></i>Sign In
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
@@ -65,8 +65,30 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
-    name: "Login"
+    name: "Login",
+    data () {
+        return {
+            email: '',
+            password: ''
+        }
+    },
+    methods: {
+    ...mapActions(['actionLogin']),
+        login () {
+            let email = this.email
+            let password = this.password
+            this.actionLogin({email,password})
+                .then(() => {
+                    this.$router.push({ name: 'userDashboard' })
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        }
+    }
 }
 </script>
 
