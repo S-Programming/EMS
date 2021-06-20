@@ -89,7 +89,7 @@ class DashboardService extends BaseService
         // $user_history = CheckinHistory::all();
         $user_history = CheckinHistory::where('user_id', $this->getAuthUserId())->get();
         $checkin_history_html = view('pages.user._partial._checkin_history_html', ['user_history' => $user_history]);
-        return view('pages.user.dashboard', $responseData)->with(['checkin_history_html' => $checkin_history_html]);
+        return  $responseData;
     }
     /**
      * Return Admin Dashboard To the Admin User.

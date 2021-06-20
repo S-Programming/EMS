@@ -26,14 +26,14 @@
                                 <!-- Sign In Form -->
                                 <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
                                 <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                <form method="POST" @submit.prevent="login">
+                                <form method="POST" @submit.prevent="handleSubmit">
 
                                     <div class="py-3">
                                         <div class="form-group">
-                                            <input id="email" class="form-control form-control-alt form-control-lg" type="email" name="email"  required autofocus />
+                                            <input id="email" class="form-control form-control-alt form-control-lg" type="email" v-model="email"  required autofocus />
                                         </div>
                                         <div class="form-group">
-                                            <input id="password" class="form-control form-control-alt form-control-lg" type="password" name="password" required autocomplete="current-password" />
+                                            <input id="password" class="form-control form-control-alt form-control-lg" type="password" v-model="password" required autocomplete="current-password" />
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox">
@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-6 col-xl-5">
-                                            <button class="btn btn-block btn-alt-primary">
+                                            <button type="submit" class="btn btn-block btn-alt-primary">
                                                 <i class="fa fa-fw fa-sign-in-alt mr-1"></i>Sign In
                                             </button>
                                         </div>
@@ -77,12 +77,14 @@ export default {
     },
     methods: {
     ...mapActions(['actionLogin']),
-        login () {
+        handleSubmit (e) {
             let email = this.email
             let password = this.password
             this.actionLogin({email,password})
                 .then(() => {
-                    this.$router.push({ name: 'userDashboard' })
+                    this.$router.replace({
+                        name: 'userDashboard'
+                    })
                 })
                 .catch(err => {
                     console.log(err)

@@ -34,9 +34,10 @@ class AuthenticatedSessionController extends Controller
         $userData = $user ? $user->toArray() : [];
         $userId = $userData['id'] ?? 0;
         $responseData = ['user_data' => $userData, 'user_id' => $userId, 'expiresIn' => 3600, 'redirect_to' => '/'];
-        return $request->wantsJson()
-            ? $this->success('Logged-in successfully', $responseData)
-            : redirect(RouteServiceProvider::HOME);
+        return $responseData;
+        //return $request->wantsJson()
+        //    ? $this->success('Logged-in successfully', $responseData)
+          //  : redirect(RouteServiceProvider::HOME);
     }
 
     /**
