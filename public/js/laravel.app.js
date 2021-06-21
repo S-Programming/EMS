@@ -2695,19 +2695,28 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       pastWeekCheckins: ''
     };
   },
-  created: function created() {// let response = await axios.get('/dashboard')
-    // console.log("hello",response);
-    // this.isCheckin = response.data.is_checkin;
-    // this.monthlyCheckins = response.data.monthlyCheckins
-    // this.pastWeekCheckins = response.data.pastWeekCheckins
-    // this.previousMonthCheckins = response.data.previousMonthCheckins
-    // this.currentWeekCheckins = response.data.currentWeekCheckins
+  created: function created() {
+    var _this = this;
 
     return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      var response;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/dashboard');
+
+            case 2:
+              response = _context.sent;
+              console.log("hello", response);
+              _this.isCheckin = response.data.is_checkin;
+              _this.monthlyCheckins = response.data.monthlyCheckins;
+              _this.pastWeekCheckins = response.data.pastWeekCheckins;
+              _this.previousMonthCheckins = response.data.previousMonthCheckins;
+              _this.currentWeekCheckins = response.data.currentWeekCheckins;
+
+            case 9:
             case "end":
               return _context.stop();
           }
@@ -21362,7 +21371,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("Login"), _vm._v(" "), _c("router-view")], 1)
+  return _c("div", [_c("router-view")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40285,7 +40294,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var routes = [{
   name: 'login',
-  path: '/login',
+  path: '/v/login',
   component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_0__["default"] // beforeEnter: (to, from, next) => {
   //     if (store.getters.isLogged) {
   //         console.log("Hello routes")

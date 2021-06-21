@@ -5,7 +5,7 @@
 <!--    -->
 <!--</default>-->
 <!--        <SideBar></SideBar>-->
-        <Login></Login>
+<!--        <Login></Login>-->
         <router-view></router-view>
     </div>
 </template>

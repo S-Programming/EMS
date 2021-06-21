@@ -4,7 +4,7 @@ import UserDashboard from "./components/users/UserDashboard";
 export const routes = [
     {
         name: 'login',
-        path: '/login',
+        path: '/v/login',
         component: Login,
         // beforeEnter: (to, from, next) => {
         //     if (store.getters.isLogged) {
