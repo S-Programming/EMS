@@ -19,7 +19,7 @@ export const routes = [
     },
     {
         name: 'userDashboard',
-        path: '/dashboard',
+        path: '/v/dashboard',
         component: UserDashboard,
 
     },

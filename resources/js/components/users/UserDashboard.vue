@@ -280,13 +280,13 @@
             }
         },
        async created() {
-            let response = await axios.get('/dashboard')
-            console.log("hello",response);
-            this.isCheckin = response.data.is_checkin;
-            this.monthlyCheckins = response.data.monthlyCheckins
-            this.pastWeekCheckins = response.data.pastWeekCheckins
-            this.previousMonthCheckins = response.data.previousMonthCheckins
-            this.currentWeekCheckins = response.data.currentWeekCheckins
+            // let response = await axios.get('/dashboard')
+            // console.log("hello",response);
+            // this.isCheckin = response.data.is_checkin;
+            // this.monthlyCheckins = response.data.monthlyCheckins
+            // this.pastWeekCheckins = response.data.pastWeekCheckins
+            // this.previousMonthCheckins = response.data.previousMonthCheckins
+            // this.currentWeekCheckins = response.data.currentWeekCheckins
 
         }
     }

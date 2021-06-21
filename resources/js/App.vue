@@ -1,8 +1,12 @@
 <template>
     <div>
-        <TopBar></TopBar>
-
-        <SideBar></SideBar>
+<!--        <TopBar></TopBar>-->
+<!--<default> -&ndash;&gt; <top side footer>/child-->
+<!--    -->
+<!--</default>-->
+<!--        <SideBar></SideBar>-->
+        <Login></Login>
+        <router-view></router-view>
     </div>
 </template>
 

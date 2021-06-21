@@ -46,6 +46,9 @@ Route::get('/ems', function () {
 require __DIR__ . '/auth.php';
 
 // Example Routes
+Route::get('/v/{any}', function () {
+    return view('layouts.app');
+});
 Route::get('/', function () {
     return view('layouts.app');
 });

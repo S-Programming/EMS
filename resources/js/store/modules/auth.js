@@ -24,7 +24,8 @@ const actions = {
         return axios
             .post('/login',credentials)
             .then(({ data }) => {
-                commit('setUserData', data.user_data.user_data)
+                console.log(data);
+               // commit('setUserData', data.user_data.user_data)
             })
     },
     logout ({ commit }) {
