@@ -260,6 +260,7 @@
             </div>
         </div>
         <!-- /Row-08 -->
+<!--        <checkin-modal v-model="checkinConfirmationModal" @checkin="checkin"></checkin-modal>-->
     </div>
 </template>
 
@@ -267,9 +268,11 @@
     import CheckinHtml from "./partial/CheckinHtml";
     import CheckoutHtml from "./partial/CheckoutHtml";
     import axios from "axios";
+    import {mapActions} from "vuex";
+    import CheckinModal from "./partial/CheckinModal";
     export default {
         name: "UserDashboard",
-        components: {CheckoutHtml, CheckinHtml},
+        components: {CheckinModal, CheckoutHtml, CheckinHtml},
         data () {
             return {
                 isCheckin:false,
@@ -277,6 +280,7 @@
                 previousMonthCheckins:'',
                 currentWeekCheckins:'',
                 pastWeekCheckins:'',
+                checkinConfirmationModal:false,
             }
         },
        async created() {
@@ -288,7 +292,13 @@
             this.previousMonthCheckins = response.data.previousMonthCheckins
             this.currentWeekCheckins = response.data.currentWeekCheckins
 
-        }
+        },
+        methods:{
+            ...mapActions(['actionCheckin']),
+            async checkin(){
+                let checkinStatus = await this.actionCheckin();
+            },
+        },
     }
 </script>
 

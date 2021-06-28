@@ -8,6 +8,6 @@ trait UserTrait
 {
     public function getAllUsers()
     {
-        return User::all();
+        return User::with('roles')->get();
     }
 }

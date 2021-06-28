@@ -33,7 +33,7 @@ class UserController extends Controller
 
     public function index()
     {
-        return view('pages.user.users')->with(['users' => $this->getAllUsers()]);
+        return (['users' => $this->getAllUsers()]);
     }
     /**
      * Import Csv of users

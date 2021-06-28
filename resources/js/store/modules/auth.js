@@ -1,10 +1,15 @@
 import axios from 'axios';
 const state = {
     user: null,
-    // token: localStorage.getItem('token') || ''
+    token: null,//localStorage.getItem('token') || ''
 }
 const getters = {
-    isLogged: state => !!state.user
+    isAuthenticated(state){
+        return state.token && state.user
+    },
+    getUser(state){
+        return state.user
+    },
 }
 const mutations = {
     setUserData (state, userData) {
@@ -13,6 +18,9 @@ const mutations = {
 
         // axios.defaults.headers.common.Authorization = `Bearer ${userData.token}`
     },
+    setToken(state,token){
+        state.token = token;
+    },
     clearUserData () {
         localStorage.removeItem('user')
         location.reload()
@@ -20,15 +28,39 @@ const mutations = {
 }
 const actions = {
 
-    actionLogin({commit},credentials){
-        return axios
-            .post('/login',credentials)
-            .then(({ data }) => {
-                console.log(data);
-               // commit('setUserData', data.user_data.user_data)
-            })
+   async actionLogin({dispatch,commit},credentials){
+        let response = await axios.post('/login',credentials);
+        console.log(response,"response")
+        dispatch('attempt',response.data.token)
+       commit('setUserData',response.data.user_data)
+    },
+    async attempt({commit, state},token) {
+        if (token) {
+            localStorage.setItem('token',token)
+            commit('setToken', token);
+        }
+        if (!state.token)
+        {
+            return
+        }
+        // try{
+        //     let response =  await axios.get('',{
+        //         headers:{
+        //             'Authorization':'Bearer' + token
+        //         }
+        //     })
+        //
+        // }catch (e) {
+        //     commit('setToken',null)
+        //     commit('setUserData',null)
+        // }
     },
     logout ({ commit }) {
+       localStorage.removeItem('token')
+        return axios.post('logout').then(() => {
+            commit('setToken',null)
+            commit('setUserData',null)
+        })
         commit('clearUserData')
     }
 }

@@ -15,10 +15,11 @@ const router = new VueRouter({
     mode: 'history',
     routes: routes
 });
-
-const app = new Vue({
-    el: '#app',
-    router: router,
-    store:store,
-    render: h => h(App),
-});
+store.dispatch('attempt',localStorage.getItem('token')).then(() => {
+    const app = new Vue({
+        el: '#app',
+        router: router,
+        store:store,
+        render: h => h(App),
+    });
+})

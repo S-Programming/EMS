@@ -83,7 +83,7 @@ export default {
             this.actionLogin({email,password})
                 .then(() => {
                     this.$router.replace({
-                        name: 'userDashboard'
+                       name: 'userDashboard'
                     })
                 })
                 .catch(err => {

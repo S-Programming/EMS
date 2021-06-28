@@ -48,7 +48,7 @@ class CheckinHistoryController extends Controller
         }
         $containerId = $request->input('containerId', 'common_popup_modal');
         $html = view('pages.user._partial._checkin_modal', ['id' => $containerId, 'data' => null])->render();
-        return $this->success('success', ['html' => $html]);
+        return $this->success('success');
     }
 
     /**
@@ -113,7 +113,7 @@ class CheckinHistoryController extends Controller
         //     foreach($data->tags as $tag){
         //         print_r($tag->name);
         //     }
-            
+
         // }
         // dd(1);
         $html = view('pages.user._partial._checkin_history_html', ['user_history' => $user_history])->render();

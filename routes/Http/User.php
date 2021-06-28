@@ -16,7 +16,7 @@ class User
         //        Route::group(['middleware' => ['auth:sanctum','isAdmin']], function () {
         Route::group(['middleware' => ['auth:sanctum']], function () {
             //   if($this->getAuthUserId())
-            Route::get('/user', [UserController::class, 'index'])->name('user.list');
+            Route::get('/users', [UserController::class, 'index'])->name('user.list');
         });
 
         //        Route::group(['middleware' => ['auth:sanctum','isSuperAdmin']], function () {
@@ -38,7 +38,7 @@ class User
 
             Route::post('/import/users/by/csv', [UserController::class, 'importUsersCsv'])->name('user.import.by.csv');
             Route::post('/check/current/password', [UserController::class, 'checkCurrentPassword'])->name('check.current.password');
-            
+
             Route::get('/user/policy', [UserController::class, 'userPolicy'])->name('user.policy');
             // Route::get('/policy', function () {
             //     return view('pages.policy');

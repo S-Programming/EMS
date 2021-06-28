@@ -1,5 +1,7 @@
 import Login from "./pages/auth/Login";
 import UserDashboard from "./components/users/UserDashboard";
+import {store} from './store/index'
+import UserList from "./components/users/UserList";
 
 export const routes = [
     {
@@ -7,20 +9,31 @@ export const routes = [
         path: '/v/login',
         component: Login,
         // beforeEnter: (to, from, next) => {
-        //     if (store.getters.isLogged) {
-        //         console.log("Hello routes")
+        //     if (store.getters['auth/isAuthenticated']) {
+        //         console.log("Yahooo");
         //         next()
         //         return
         //     }
-        //     console.log("Hello routes not")
-        //
-        //     next('/login')
+        //     next('login')
         // },
     },
     {
         name: 'userDashboard',
         path: '/v/dashboard',
         component: UserDashboard,
-
+        // beforeEnter:(to,from,next) => {
+        // if(!store.getters['auth/isAuthenticated']){
+        //     return next({
+        //           name:'login'
+        //         })
+        //     }
+        //     next()
+        // }
     },
+    {
+        name: 'users',
+        path: '/v/users',
+        component: UserList,
+    }
+
 ];

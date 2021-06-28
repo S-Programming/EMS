@@ -68,7 +68,7 @@ class CheckinHistoryService extends BaseService
             // dd($currentTime);
             $html = view('pages.user._partial._checkout_html')->render();
             //$checkin_history_html = view('pages.user._partial._checkin_history_html', ['user_history' => $user_history])->render();
-            return $this->successResponse('You are successfully checked-in', ['html' => $html, 'html_section_id' => 'checkin-section', 'module' => 'checkin']);
+            return $this->successResponse('You are successfully checked-in');
         }
     }
 

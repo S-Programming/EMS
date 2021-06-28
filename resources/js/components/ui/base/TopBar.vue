@@ -60,9 +60,9 @@
                         <button type="button" class="btn btn-sm btn-dual d-flex align-items-center"
                                 id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
-                            <img class="rounded-circle" :src=" ('media/avatars/avatar10.jpg') " alt="Header Avatar"
-                                 style="width: 21px;">
-                            <span class="d-none d-sm-inline-block ml-2">$user->first_name??''</span>
+<!--                            <img class="rounded-circle" :src=" ('media/avatars/avatar10.jpg') " alt="Header Avatar"-->
+<!--                                 style="width: 21px;">-->
+                            <span class="d-none d-sm-inline-block ml-2">{{user.first_name || ''}}</span>
                             <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block ml-1 mt-1"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-md dropdown-menu-right p-0 border-0"
@@ -70,7 +70,8 @@
                             <div class="p-3 text-center bg-primary-dark rounded-top">
                                 <img class="img-avatar img-avatar48 img-avatar-thumb"
                                      :src=" ('media/avatars/avatar10.jpg')" alt="">
-                                <p class="mt-2 mb-0 text-white font-w500">$user->first_name??'' $user->last_name??''</p>
+                                <p class="mt-2 mb-0 text-white font-w500">{{user.first_name ||''}}
+                                    {{user.last_name ||''}}</p>
                                 <p class="mb-0 text-white-50 font-size-sm">$user->roles->first()->name??''</p>
                             </div>
                             <div class="p-2">
@@ -239,8 +240,20 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
     export default {
-        name: "TopBar"
+        name: "TopBar",
+        data(){
+            return{
+                user:null,
+            }
+        },
+        computed:{
+          ...mapGetters(['getUser'])
+        },
+        created() {
+            this.user = this.getUser
+        }
     }
 </script>
 
