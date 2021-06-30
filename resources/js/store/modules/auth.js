@@ -30,9 +30,9 @@ const actions = {
 
    async actionLogin({dispatch,commit},credentials){
         let response = await axios.post('/login',credentials);
-        console.log(response,"response")
+        // console.log(response,"response")
         dispatch('attempt',response.data.token)
-       commit('setUserData',response.data.user_data)
+        commit('setUserData',response.data.user_data)
     },
     async attempt({commit, state},token) {
         if (token) {

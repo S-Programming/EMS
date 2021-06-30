@@ -8,26 +8,32 @@ export const routes = [
         name: 'login',
         path: '/v/login',
         component: Login,
-        // beforeEnter: (to, from, next) => {
-        //     if (store.getters['auth/isAuthenticated']) {
-        //         console.log("Yahooo");
-        //         next()
-        //         return
-        //     }
-        //     next('login')
-        // },
+        beforeEnter: (to, from, next) => {
+            let token = localStorage.getItem("token");
+            if (typeof token!=='undefined' && token){
+                return next({
+                    name: 'userDashboard'
+                 })
+
+            }
+            return next()
+        },
     },
     {
         name: 'userDashboard',
         path: '/v/dashboard',
         component: UserDashboard,
         // beforeEnter:(to,from,next) => {
-        // if(!store.getters['auth/isAuthenticated']){
+        //     console.log(store.getters['isAuthenticated'],"dashboard");
+        // if(!store.getters['isAuthenticated']){
         //     return next({
         //           name:'login'
         //         })
         //     }
-        //     next()
+        // console.log(next(),"next()",to,from)
+        //     next({
+        //         name:'dashboard'
+        //     })
         // }
     },
     {

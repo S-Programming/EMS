@@ -192,7 +192,7 @@ jQuery(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\wamp64\www\EMS\resources\js\pages\tables_datatables.js */"./resources/js/pages/tables_datatables.js");
+module.exports = __webpack_require__(/*! /var/www/html/EMS/resources/js/pages/tables_datatables.js */"./resources/js/pages/tables_datatables.js");
 
 
 /***/ })

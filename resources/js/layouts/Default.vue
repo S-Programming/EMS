@@ -1,8 +1,9 @@
 <template>
     <div id="app">
+        {{isAuthenticated}} humayon
         <TopBar v-if="isAuthenticated"/>
-        <Login v-else/>
         <Child/>
+<!--        <Login v-else/>-->
     </div>
 </template>
 

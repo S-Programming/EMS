@@ -1,4 +1,5 @@
 <template>
+
     <AppModal v-model="isModalOpen" :config="{class:'sm:w-1/3 w-3/5 w-1/12'}">
         <template v-slot:body-content>
             <h3 class="block-title">CheckIn Confirmation</h3>

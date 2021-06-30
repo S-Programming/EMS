@@ -2947,6 +2947,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CheckinModal",
@@ -3057,6 +3058,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -23438,7 +23440,8 @@ var render = function() {
     "div",
     { attrs: { id: "app" } },
     [
-      _vm.isAuthenticated ? _c("TopBar") : _c("Login"),
+      _vm._v("\n        " + _vm._s(_vm.isAuthenticated) + " humayon\n        "),
+      _vm.isAuthenticated ? _c("TopBar") : _vm._e(),
       _vm._v(" "),
       _c("Child")
     ],
@@ -40631,15 +40634,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************************!*\
   !*** ./resources/js/components/users/UserList.vue ***!
   \****************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _UserList_vue_vue_type_template_id_3b043a5b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserList.vue?vue&type=template&id=3b043a5b&scoped=true& */ "./resources/js/components/users/UserList.vue?vue&type=template&id=3b043a5b&scoped=true&");
 /* harmony import */ var _UserList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserList.vue?vue&type=script&lang=js& */ "./resources/js/components/users/UserList.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _UserList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _UserList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -40669,7 +40671,7 @@ component.options.__file = "resources/js/components/users/UserList.vue"
 /*!*****************************************************************************!*\
   !*** ./resources/js/components/users/UserList.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41132,25 +41134,32 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [{
   name: 'login',
   path: '/v/login',
-  component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_0__["default"] // beforeEnter: (to, from, next) => {
-  //     if (store.getters['auth/isAuthenticated']) {
-  //         console.log("Yahooo");
-  //         next()
-  //         return
-  //     }
-  //     next('login')
-  // },
+  component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_0__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    var token = localStorage.getItem("token");
 
+    if (typeof token !== 'undefined' && token) {
+      return next({
+        name: 'userDashboard'
+      });
+    }
+
+    return next();
+  }
 }, {
   name: 'userDashboard',
   path: '/v/dashboard',
   component: _components_users_UserDashboard__WEBPACK_IMPORTED_MODULE_1__["default"] // beforeEnter:(to,from,next) => {
-  // if(!store.getters['auth/isAuthenticated']){
+  //     console.log(store.getters['isAuthenticated'],"dashboard");
+  // if(!store.getters['isAuthenticated']){
   //     return next({
   //           name:'login'
   //         })
   //     }
-  //     next()
+  // console.log(next(),"next()",to,from)
+  //     next({
+  //         name:'dashboard'
+  //     })
   // }
 
 }, {
@@ -41248,11 +41257,11 @@ var actions = {
 
             case 3:
               response = _context.sent;
-              console.log(response, "response");
+              // console.log(response,"response")
               dispatch('attempt', response.data.token);
               commit('setUserData', response.data.user_data);
 
-            case 7:
+            case 6:
             case "end":
               return _context.stop();
           }
@@ -41315,7 +41324,7 @@ var auth = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\wamp64\www\EMS\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/EMS/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })
