@@ -2001,6 +2001,9 @@ __webpack_require__.r(__webpack_exports__);
       // layout: null,
       defaultLayout: 'Default'
     };
+  },
+  created: function created() {
+    console.log("ASDasdasdas");
   } // mounted() {
   //     this.$loading = this.$refs.loading
   // },
@@ -3052,6 +3055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_utilities_Child__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/utilities/Child */ "./resources/js/components/utilities/Child.vue");
 /* harmony import */ var _pages_auth_Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/auth/Login */ "./resources/js/pages/auth/Login.vue");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _components_users_UserDashboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/users/UserDashboard */ "./resources/js/components/users/UserDashboard.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -3067,19 +3071,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
+
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Default',
+  data: function data() {
+    return {
+      componentName: 'userDashboard'
+    };
+  },
   components: {
     Login: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_2__["default"],
     Child: _components_utilities_Child__WEBPACK_IMPORTED_MODULE_1__["default"],
-    TopBar: _components_ui_base_TopBar__WEBPACK_IMPORTED_MODULE_0__["default"]
+    TopBar: _components_ui_base_TopBar__WEBPACK_IMPORTED_MODULE_0__["default"],
+    UserDashboard: _components_users_UserDashboard__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapGetters"])(['isAuthenticated']))
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapGetters"])(['isAuthenticated'])),
+  created: function created() {
+    console.log("ASDasdasdsadasdassadasd");
+  }
 });
 
 /***/ }),
@@ -23439,12 +23452,7 @@ var render = function() {
   return _c(
     "div",
     { attrs: { id: "app" } },
-    [
-      _vm._v("\n        " + _vm._s(_vm.isAuthenticated) + " humayon\n        "),
-      _vm.isAuthenticated ? _c("TopBar") : _vm._e(),
-      _vm._v(" "),
-      _c("Child")
-    ],
+    [_vm.isAuthenticated ? _c("TopBar") : _vm._e(), _vm._v(" "), _c("child")],
     1
   )
 }
@@ -41132,6 +41140,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [{
+  path: '/',
+  component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_0__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    var token = localStorage.getItem("token");
+
+    if (typeof token !== 'undefined' && token) {
+      return next({
+        name: 'userDashboard'
+      });
+    }
+
+    return next();
+  }
+}, {
   name: 'login',
   path: '/v/login',
   component: _pages_auth_Login__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -41149,19 +41171,19 @@ var routes = [{
 }, {
   name: 'userDashboard',
   path: '/v/dashboard',
-  component: _components_users_UserDashboard__WEBPACK_IMPORTED_MODULE_1__["default"] // beforeEnter:(to,from,next) => {
-  //     console.log(store.getters['isAuthenticated'],"dashboard");
-  // if(!store.getters['isAuthenticated']){
-  //     return next({
-  //           name:'login'
-  //         })
-  //     }
-  // console.log(next(),"next()",to,from)
-  //     next({
-  //         name:'dashboard'
-  //     })
-  // }
+  component: _components_users_UserDashboard__WEBPACK_IMPORTED_MODULE_1__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    var token = localStorage.getItem("token");
+    console.log(token);
 
+    if (!token) {
+      return next({
+        name: 'login'
+      });
+    }
+
+    return next();
+  }
 }, {
   name: 'users',
   path: '/v/users',
