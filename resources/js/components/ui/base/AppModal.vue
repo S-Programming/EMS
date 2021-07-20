@@ -37,9 +37,6 @@
                 }
             }
         },
-        created() {
-            console.log("App modal")
-        },
         methods:{
             close() {
                 this.$emit("input", !this.value);

@@ -42,12 +42,10 @@
         methods:{
             ...mapActions(['actionCheckin']),
             showCheckinConfirmation() {
-                console.log("Called Modal")
                 this.checkinConfirmationModal = true
                 // this.$emit('checkin',this.checkinConfirmationModal)
             },
              checkin(value){
-                console.log("asdas",value)
                 this.checkinConfirmationModal = value
                 // let checkinStatus = await this.actionCheckin();
             },

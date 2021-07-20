@@ -32,9 +32,6 @@
             // layout: null,
             defaultLayout: 'Default'
         }),
-        created() {
-            console.log("ASDasdasdas");
-        }
         // mounted() {
         //     this.$loading = this.$refs.loading
         // },
