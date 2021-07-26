@@ -366,7 +366,7 @@ MAIN CONTENT LAYOUT
                 <!-- END Open Search Section -->
 
                 <!-- Search Form (visible on larger screens) -->
-                <form class="d-none d-sm-inline-block" action="/dashboard" method="POST">
+                <formpage-header class="d-none d-sm-inline-block" action="/dashboard" method="POST">
                     @csrf
                     <div class="input-group input-group-sm">
                         <input type="text" class="form-control form-control-alt" placeholder="Search.."
@@ -377,7 +377,7 @@ MAIN CONTENT LAYOUT
                                     </span>
                         </div>
                     </div>
-                </form>
+                </formpage-header>
                 <!-- END Search Form -->
             </div>
             <!-- END Left Section -->

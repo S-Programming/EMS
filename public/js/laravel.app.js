@@ -2054,6 +2054,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AppModal",
   props: {
@@ -2093,89 +2096,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ui/base/SideBar.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "SideBar"
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\wamp64\\www\\EMS\\resources\\js\\components\\ui\\base\\SideBar.vue: Missing semicolon. (92:39)\n\n\u001b[0m \u001b[90m 90 |\u001b[39m             $html \u001b[33m=\u001b[39m \u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 91 |\u001b[39m             \u001b[90m// if ((menus) && count(menus) > 0) {\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m                 forEach (menu \u001b[36min\u001b[39m menus) {\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 93 |\u001b[39m                     subMenus \u001b[33m=\u001b[39m menuRole([\u001b[32m'parent_id'\u001b[39m \u001b[33m=>\u001b[39m (menu[\u001b[32m'menu_id'\u001b[39m] \u001b[33m||\u001b[39m \u001b[35m0\u001b[39m)])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 94 |\u001b[39m                     \u001b[36mif\u001b[39m (subMenus \u001b[33m&&\u001b[39m subMenus \u001b[33m!=\u001b[39m\u001b[32m''\u001b[39m) {\u001b[0m\n\u001b[0m \u001b[90m 95 |\u001b[39m                         innerHtml \u001b[33m=\u001b[39m sidebarHtml(subMenus)\u001b[33m;\u001b[39m\u001b[0m\n    at Parser._raise (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:816:17)\n    at Parser.raiseWithData (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:809:17)\n    at Parser.raise (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:770:17)\n    at Parser.semicolon (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:9875:10)\n    at Parser.parseExpressionStatement (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:13092:10)\n    at Parser.parseStatementContent (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:12681:19)\n    at Parser.parseStatement (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:12545:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:13134:25)\n    at Parser.parseBlockBody (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:13125:10)\n    at Parser.parseBlock (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:13109:10)\n    at Parser.parseFunctionBody (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11992:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11976:10)\n    at Parser.parseMethod (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11926:10)\n    at Parser.parseObjectMethod (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11854:19)\n    at Parser.parseObjPropValue (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11887:23)\n    at Parser.parsePropertyDefinition (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11811:10)\n    at Parser.parseObjectLike (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11702:25)\n    at Parser.parseExprAtom (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11222:23)\n    at Parser.parseExprSubscripts (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10878:23)\n    at Parser.parseUpdate (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10858:21)\n    at Parser.parseMaybeUnary (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10836:23)\n    at Parser.parseExprOps (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10693:23)\n    at Parser.parseMaybeConditional (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10667:23)\n    at Parser.parseMaybeAssign (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10630:21)\n    at C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10598:39\n    at Parser.allowInAnd (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:12345:12)\n    at Parser.parseMaybeAssignAllowIn (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10598:17)\n    at Parser.parseObjectProperty (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11862:101)\n    at Parser.parseObjPropValue (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11887:100)\n    at Parser.parsePropertyDefinition (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11811:10)\n    at Parser.parseObjectLike (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11702:25)\n    at Parser.parseExprAtom (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:11222:23)\n    at Parser.parseExprSubscripts (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10878:23)\n    at Parser.parseUpdate (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10858:21)\n    at Parser.parseMaybeUnary (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10836:23)\n    at Parser.parseExprOps (C:\\wamp64\\www\\EMS\\node_modules\\@babel\\parser\\lib\\index.js:10693:23)");
 
 /***/ }),
 
@@ -2195,7 +2118,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
 //
 //
 //
@@ -2471,17 +2393,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _partial_CheckinModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./partial/CheckinModal */ "./resources/js/components/users/partial/CheckinModal.vue");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
 //
@@ -2771,56 +2693,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       checkinConfirmationModal: false
     };
   },
-  created: function created() {
-    var _this = this;
-
-    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-      var response;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('/dashboard');
-
-            case 2:
-              response = _context.sent;
-              _this.isCheckin = response.data.is_checkin;
-              _this.monthlyCheckins = response.data.monthlyCheckins;
-              _this.pastWeekCheckins = response.data.pastWeekCheckins;
-              _this.previousMonthCheckins = response.data.previousMonthCheckins;
-              _this.currentWeekCheckins = response.data.currentWeekCheckins;
-
-            case 8:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }))();
-  },
+  // async created() {
+  //      let response = await axios.get('/dashboard')
+  //     console.log(response,"response");
+  //      this.isCheckin = response.data.is_checkin;
+  //      this.monthlyCheckins = response.data.monthlyCheckins
+  //      this.pastWeekCheckins = response.data.pastWeekCheckins
+  //      this.previousMonthCheckins = response.data.previousMonthCheckins
+  //      this.currentWeekCheckins = response.data.currentWeekCheckins
+  //
+  //  },
   methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__["mapActions"])(['actionCheckin'])), {}, {
     checkin: function checkin() {
-      var _this2 = this;
+      var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var checkinStatus;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context.prev = _context.next) {
               case 0:
-                _context2.next = 2;
-                return _this2.actionCheckin();
+                _this.checkinConfirmationModal = true; // let checkinStatus = await this.actionCheckin();
 
-              case 2:
-                checkinStatus = _context2.sent;
-
-              case 3:
+              case 1:
               case "end":
-                return _context2.stop();
+                return _context.stop();
             }
           }
-        }, _callee2);
+        }, _callee);
       }))();
     }
   })
@@ -3147,18 +3046,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -21835,54 +21722,43 @@ var render = function() {
           value: _vm.value,
           expression: "value"
         }
-      ],
-      staticClass:
-        "modal fixed inset-0 z-50 outline-none focus:outline-none overflow-y-auto"
+      ]
     },
     [
-      _c(
-        "div",
-        {
-          staticClass: "bg-white mt-3 mb-1 md:mt-3 pb-4 mx-auto",
-          class: _vm.config.class
-        },
-        [
-          _c(
-            "div",
-            { staticClass: "border-0 outline-none focus:outline-none" },
-            [
-              _c("div", { staticClass: "relative h-10 md:h-16 w-full" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass:
-                      "absolute right-0 mr-2 md:mr-3 p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none z-50",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        return _vm.close.apply(null, arguments)
-                      }
+      _c("div", { staticClass: "modal-content", class: _vm.config.class }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "block block-rounded block-themed block-transparent mb-0"
+          },
+          [
+            _c("div", { staticClass: "block-options" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn-block-option",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.close.apply(null, arguments)
                     }
-                  },
-                  [
-                    _c(
-                      "span",
-                      {
-                        staticClass:
-                          "bg-transparent text-gray-600 opacity-5 font-thin text-6xl block outline-none focus:outline-none hover:text-gray-800"
-                      },
-                      [_vm._v("×")]
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _vm._t("body-content")
-            ],
-            2
-          )
-        ]
-      )
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-fw fa-times" }),
+                  _vm._v(
+                    "\n                        Close\n                    "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._t("body-content")
+          ],
+          2
+        )
+      ])
     ]
   )
 }
@@ -21915,141 +21791,154 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _vm._v("\n        fkjsdfkjsdhk\n        "),
-      _c("nav", { attrs: { id: "sidebar", "aria-label": "Main Navigation" } }, [
-        _c("div", { staticClass: "content-header bg-white-5" }, [
-          _c(
-            "a",
-            { staticClass: "font-w600 text-dual", attrs: { href: "/" } },
-            [
-              _c("span", { staticClass: "smini-visible" }, [
-                _c("i", { staticClass: "fa fa-circle-notch text-primary" })
-              ]),
-              _vm._v(" "),
-              _c("span", {
-                staticClass: "smini-hide font-size-h5 tracking-wider"
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", [
-            _c("div", { staticClass: "dropdown d-inline-block ml-2" }, [
+    return _c(
+      "div",
+      {
+        staticClass:
+          "sidebar-o enable-page-overlay sidebar-dark side-scroll  main-content-narrow",
+        attrs: { id: "page-container" }
+      },
+      [
+        _c(
+          "nav",
+          { attrs: { id: "sidebar", "aria-label": "Main Navigation" } },
+          [
+            _c("div", { staticClass: "content-header bg-white-5" }, [
               _c(
                 "a",
-                {
-                  staticClass: "btn btn-sm btn-dual",
-                  attrs: {
-                    id: "sidebar-themes-dropdown",
-                    "data-toggle": "dropdown",
-                    "aria-haspopup": "true",
-                    "aria-expanded": "false",
-                    href: "#"
-                  }
-                },
-                [_c("i", { staticClass: "si si-drop" })]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "d-lg-none btn btn-sm btn-dual ml-1",
-                attrs: {
-                  "data-toggle": "layout",
-                  "data-action": "sidebar_close",
-                  href: "javascript:void(0)"
-                }
-              },
-              [_c("i", { staticClass: "fa fa-fw fa-times" })]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "js-sidebar-scroll" }, [
-          _c("div", { staticClass: "content-side" }, [
-            _c("ul", { staticClass: "nav-main" }, [
-              _c("li", { staticClass: "nav-main-item" }, [
+                { staticClass: "font-w600 text-dual", attrs: { href: "/" } },
+                [
+                  _c("span", { staticClass: "smini-visible" }, [
+                    _c("i", { staticClass: "fa fa-circle-notch text-primary" })
+                  ]),
+                  _vm._v(" "),
+                  _c("span", {
+                    staticClass: "smini-hide font-size-h5 tracking-wider"
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", [
+                _c("div", { staticClass: "dropdown d-inline-block ml-2" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-sm btn-dual",
+                      attrs: {
+                        id: "sidebar-themes-dropdown",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "true",
+                        "aria-expanded": "false",
+                        href: "#"
+                      }
+                    },
+                    [_c("i", { staticClass: "si si-drop" })]
+                  )
+                ]),
+                _vm._v(" "),
                 _c(
                   "a",
                   {
-                    staticClass: "nav-main-link active",
-                    attrs: { href: "gs_backend.html" }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "nav-main-link-icon si si-speedometer"
-                    }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "nav-main-link-name" }, [
-                      _vm._v("Dashboard")
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-main-heading" }, [
-                _vm._v("Heading")
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-main-item" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-main-link nav-main-link-submenu",
+                    staticClass: "d-lg-none btn btn-sm btn-dual ml-1",
                     attrs: {
-                      "data-toggle": "submenu",
-                      "aria-haspopup": "true",
-                      "aria-expanded": "false",
-                      href: "#"
+                      "data-toggle": "layout",
+                      "data-action": "sidebar_close",
+                      href: "javascript:void(0)"
                     }
                   },
-                  [
-                    _c("i", { staticClass: "nav-main-link-icon si si-puzzle" }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "nav-main-link-name" }, [
-                      _vm._v("Dropdown")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c("ul", { staticClass: "nav-main-submenu" }, [
+                  [_c("i", { staticClass: "fa fa-fw fa-times" })]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "js-sidebar-scroll" }, [
+              _c("div", { staticClass: "content-side" }, [
+                _c("ul", { staticClass: "nav-main" }, [
                   _c("li", { staticClass: "nav-main-item" }, [
                     _c(
                       "a",
                       {
-                        staticClass: "nav-main-link",
-                        attrs: { href: "javascript:void(0)" }
+                        staticClass: "nav-main-link active",
+                        attrs: { href: "gs_backend.html" }
                       },
                       [
+                        _c("i", {
+                          staticClass: "nav-main-link-icon si si-speedometer"
+                        }),
+                        _vm._v(" "),
                         _c("span", { staticClass: "nav-main-link-name" }, [
-                          _vm._v("Link #1")
+                          _vm._v("Dashboard")
                         ])
                       ]
                     )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-main-heading" }, [
+                    _vm._v("Heading")
                   ]),
                   _vm._v(" "),
                   _c("li", { staticClass: "nav-main-item" }, [
                     _c(
                       "a",
                       {
-                        staticClass: "nav-main-link",
-                        attrs: { href: "javascript:void(0)" }
+                        staticClass: "nav-main-link nav-main-link-submenu",
+                        attrs: {
+                          "data-toggle": "submenu",
+                          "aria-haspopup": "true",
+                          "aria-expanded": "false",
+                          href: "#"
+                        }
                       },
                       [
+                        _c("i", {
+                          staticClass: "nav-main-link-icon si si-puzzle"
+                        }),
+                        _vm._v(" "),
                         _c("span", { staticClass: "nav-main-link-name" }, [
-                          _vm._v("Link #2")
+                          _vm._v("Dropdown")
                         ])
                       ]
-                    )
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "nav-main-submenu" }, [
+                      _c("li", { staticClass: "nav-main-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-main-link",
+                            attrs: { href: "javascript:void(0)" }
+                          },
+                          [
+                            _c("span", { staticClass: "nav-main-link-name" }, [
+                              _vm._v("Link #1")
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-main-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-main-link",
+                            attrs: { href: "javascript:void(0)" }
+                          },
+                          [
+                            _c("span", { staticClass: "nav-main-link-name" }, [
+                              _vm._v("Link #2")
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
                   ])
                 ])
               ])
             ])
-          ])
-        ])
-      ])
-    ])
+          ]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -22073,51 +21962,47 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("header", { attrs: { id: "page-header" } }, [
-      _c("div", { staticClass: "content-header" }, [
-        _vm._m(0),
+  return _c("header", { attrs: { id: "page-header" } }, [
+    _c("div", { staticClass: "content-header" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex align-items-center" }, [
+        _c("div", { staticClass: "dropdown d-inline-block ml-2" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "dropdown-menu dropdown-menu-md dropdown-menu-right p-0 border-0",
+              attrs: { "aria-labelledby": "page-header-user-dropdown" }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "p-3 text-center bg-primary-dark rounded-top" },
+                [
+                  _c("img", {
+                    staticClass: "img-avatar img-avatar48 img-avatar-thumb",
+                    attrs: { src: "media/avatars/avatar10.jpg", alt: "" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(2)
+            ]
+          )
+        ]),
         _vm._v(" "),
-        _c("div", { staticClass: "d-flex align-items-center" }, [
-          _c("div", { staticClass: "dropdown d-inline-block ml-2" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "dropdown-menu dropdown-menu-md dropdown-menu-right p-0 border-0",
-                attrs: { "aria-labelledby": "page-header-user-dropdown" }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "p-3 text-center bg-primary-dark rounded-top"
-                  },
-                  [
-                    _c("img", {
-                      staticClass: "img-avatar img-avatar48 img-avatar-thumb",
-                      attrs: { src: "media/avatars/avatar10.jpg", alt: "" }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _vm._m(2)
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _vm._m(3),
-          _vm._v(" "),
-          _vm._m(4)
-        ])
-      ]),
-      _vm._v(" "),
-      _vm._m(5),
-      _vm._v(" "),
-      _vm._m(6)
-    ])
+        _vm._m(3),
+        _vm._v(" "),
+        _vm._m(4)
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(5),
+    _vm._v(" "),
+    _vm._m(6)
   ])
 }
 var staticRenderFns = [
@@ -23567,7 +23452,7 @@ var render = function() {
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-default rounded cancel-button",
+                    staticClass: "btn btn-alt-primary mr-1",
                     on: {
                       click: function($event) {
                         $event.preventDefault()
@@ -23581,7 +23466,7 @@ var render = function() {
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-danger rounded jury-btn text-white",
+                    staticClass: "checkin-btn btn btn-primary",
                     on: {
                       click: function($event) {
                         $event.preventDefault()
@@ -23708,42 +23593,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("event-nav-bar-u-i", {
-    scopedSlots: _vm._u([
-      {
-        key: "event-top-bar",
-        fn: function() {
-          return [
-            _c("event-top-bar", {
-              scopedSlots: _vm._u([
-                {
-                  key: "event-top-bar-actions",
-                  fn: function() {
-                    return [_c("event-top-bar-actions")]
-                  },
-                  proxy: true
-                }
-              ])
-            })
-          ]
-        },
-        proxy: true
-      },
-      {
-        key: "main-event-content",
-        fn: function() {
-          return [
-            _c(
-              "keep-alive",
-              [_c(_vm.currentStepComponent, { tag: "component" })],
-              1
-            )
-          ]
-        },
-        proxy: true
-      }
-    ])
-  })
+  return _c("div", { attrs: { id: "app" } }, [_c("SideBar")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -41620,11 +41470,11 @@ var state = {
 };
 var getters = {
   isAuthenticated: function isAuthenticated(state) {
-    console.log(state.token && state.user, "asdasdas");
+    // console.log(state.token && state.user,"asdasdas")
     return state.token; //&& state.user
   },
   getUser: function getUser(state) {
-    console.log(state, state.user, "getUser getter");
+    // console.log(state,state.user,"getUser getter");
     return state.user;
   }
 };

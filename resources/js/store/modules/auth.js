@@ -5,12 +5,12 @@ const state = {
 }
 const getters = {
     isAuthenticated(state){
-    console.log(state.token && state.user,"asdasdas")
+    // console.log(state.token && state.user,"asdasdas")
         return state.token //&& state.user
 
     },
     getUser(state){
-        console.log(state,state.user,"getUser getter");
+        // console.log(state,state.user,"getUser getter");
         return state.user
     },
 }

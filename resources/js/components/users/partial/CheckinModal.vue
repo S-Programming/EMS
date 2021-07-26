@@ -8,11 +8,11 @@
                 </div>
                 <div class="block-content block-content-full text-right border-top">
                     <button
-                        class="btn btn-default rounded cancel-button"
+                        class="btn btn-alt-primary mr-1"
                         @click.prevent="close"> Cancel
                     </button>
                     <button
-                        class="btn btn-danger rounded jury-btn text-white"
+                        class="checkin-btn btn btn-primary"
                         @click.prevent="checkin"> Yes, Checkin
                     </button>
                 </div>

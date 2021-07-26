@@ -1,6 +1,5 @@
 <template>
-    <div>
-        fkjsdfkjsdhk
+    <div id="page-container" class="sidebar-o enable-page-overlay sidebar-dark side-scroll  main-content-narrow">
         <nav id="sidebar" aria-label="Main Navigation">
             <!-- Side Header -->
             <div class="content-header bg-white-5">
@@ -76,7 +75,43 @@
 
 <script>
     export default {
-        name: "SideBar"
+        name: "SideBar",
+        data () {
+            return {
+                menus: [],
+            }
+        },
+        created() {
+            menus = menuRole();
+            menus = sidebarHtml(menus);
+        },
+        methods:{
+            sidebarHtml(menus = []){
+                $html = '';
+                // if ((menus) && count(menus) > 0) {
+                    forEach (menu in menus) {
+                        subMenus = menuRole(['parent_id' => (menu['menu_id'] || 0)]);
+                        if (subMenus && subMenus !='') {
+                            innerHtml = sidebarHtml(subMenus);
+                            if (innerHtml != '') {
+                                $html .= view('utils._partial.parent_menus', ['data' => ($menu['menu'] ?? []), 'inner_html' => $innerHtml])->render();
+                            }
+                        } else {
+                            $html .= view('utils._partial.menu', ['data' => ($menu['menu'] ?? [])])->render();
+                        }
+                    }
+                // }
+                return $html;
+            }
+        },
+        menuRole(requestData = [])
+        {
+            parentId = requestData['parent_id'] || 0;
+            parentMenus = MenuRole::with('menu')->whereIn('role_id', $this->userRoles())->whereHas('menu', function ($query) use ($parentId) {
+            query->where('parent_id', $parentId); // Api Hit
+        })->get();
+            return parentMenus ? parentMenus->toArray() : []; // in js array
+        },
     }
 </script>
 

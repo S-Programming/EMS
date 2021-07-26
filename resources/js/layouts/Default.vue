@@ -1,31 +1,19 @@
 <template>
     <div id="app">
-        <div v-if="isAuthenticated">
-        <TopBar />
-        <SideBar></SideBar>
-        </div>
-        <child></child>
+<!--        <div v-if="isAuthenticated" id="page-container"-->
+<!--             //page-header-fixed
+class="sidebar-o enable-page-overlay sidebar-dark side-scroll  main-content-narrow">-->
+<!--            <TopBar />-->
+<!--            <SideBar></SideBar>-->
+<!--            <div style="margin-top: 60px">-->
+<!--                <child></child>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <UserDashboard></UserDashboard>-->
+<SideBar></SideBar>
 <!--        <component v-bind:is="componentName"></component>-->
     </div>
 </template>
-<template>
-    <event-nav-bar-u-i>
-        <template v-slot:event-top-bar>
-            <event-top-bar>
-                <template v-slot:event-top-bar-actions>
-                    <event-top-bar-actions/>
-                </template>
-            </event-top-bar>
-        </template>
-        <template v-slot:main-event-content class="main-content table-cell">
-            <keep-alive>
-                <component v-bind:is="currentStepComponent"></component>
-            </keep-alive>
-        </template>
-    </event-nav-bar-u-i>
-</template>
-
-
 <script>
     import TopBar from "../components/ui/base/TopBar";
     import Child from "../components/utilities/Child";

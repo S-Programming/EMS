@@ -260,7 +260,7 @@
             </div>
         </div>
         <!-- /Row-08 -->
-<!--        <checkin-modal v-model="checkinConfirmationModal" @checkin="checkin"></checkin-modal>-->
+<!--        <checkin-modal v-model="checkinConfirmationModal" @click.prevent="checkin"></checkin-modal>-->
     </div>
 </template>
 
@@ -283,19 +283,21 @@
                 checkinConfirmationModal:false,
             }
         },
-       async created() {
-            let response = await axios.get('/dashboard')
-            this.isCheckin = response.data.is_checkin;
-            this.monthlyCheckins = response.data.monthlyCheckins
-            this.pastWeekCheckins = response.data.pastWeekCheckins
-            this.previousMonthCheckins = response.data.previousMonthCheckins
-            this.currentWeekCheckins = response.data.currentWeekCheckins
-
-        },
+       // async created() {
+       //      let response = await axios.get('/dashboard')
+       //     console.log(response,"response");
+       //      this.isCheckin = response.data.is_checkin;
+       //      this.monthlyCheckins = response.data.monthlyCheckins
+       //      this.pastWeekCheckins = response.data.pastWeekCheckins
+       //      this.previousMonthCheckins = response.data.previousMonthCheckins
+       //      this.currentWeekCheckins = response.data.currentWeekCheckins
+       //
+       //  },
         methods:{
             ...mapActions(['actionCheckin']),
             async checkin(){
-                let checkinStatus = await this.actionCheckin();
+                this.checkinConfirmationModal = true;
+                // let checkinStatus = await this.actionCheckin();
             },
         },
     }

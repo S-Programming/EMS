@@ -1,15 +1,18 @@
 <template>
-    <div class="modal fixed inset-0 z-50 outline-none focus:outline-none overflow-y-auto"
+    <div class=""
          v-show="value"> <!-- overflow-hidden -->
-        <div :class=config.class class="bg-white mt-3 mb-1 md:mt-3 pb-4 mx-auto">
+        <div :class="config.class"
+             class="modal-content">
             <!--content-->
-            <div class="border-0 outline-none focus:outline-none">
+            <div class="block block-rounded block-themed block-transparent mb-0">
                 <!--header-->
-                <div class="relative h-10 md:h-16 w-full">
+                <div class="block-options">
                     <button
-                        class="absolute right-0 mr-2 md:mr-3 p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none z-50"
+                        class="btn-block-option"
                         @click.prevent="close">
-                        <span class="bg-transparent text-gray-600 opacity-5 font-thin text-6xl block outline-none focus:outline-none hover:text-gray-800">×</span>
+<!--                        <span class="bg-transparent text-gray-600 opacity-5 font-thin text-6xl block outline-none focus:outline-none hover:text-gray-800">×</span>-->
+                        <i class="fa fa-fw fa-times"></i>
+                        Close
                     </button>
                 </div>
                 <!--   dynamic template   -->

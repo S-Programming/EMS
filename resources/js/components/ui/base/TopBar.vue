@@ -1,5 +1,4 @@
 <template>
-    <div>
         <header id="page-header">
             <!-- Header Content -->
             <div class="content-header">
@@ -236,7 +235,7 @@
             </div>
             <!-- END Header Loader -->
         </header>
-    </div>
+
 </template>
 
 <script>
